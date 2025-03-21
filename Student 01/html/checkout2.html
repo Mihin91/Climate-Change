@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/checkout2.css">
+</head>
+<body>
+    <div class="container">
+        <div class="payment-section">
+            <h2>Payment Details</h2>
+            <form class="payment-form">
+                <div class="input-group">
+                    <i class="fas fa-credit-card"></i>
+                    <label for="num"></label>
+                    <input type="text" id="num" name="card_number" placeholder="Card Number (1234 5678 9012 3456)" maxlength="19">
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-calendar-alt"></i>
+                    <label for="date"></label>
+                    <input type="text" id="date" name="expiry_date" placeholder="MM/YY (e.g., 05/12)">
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <label for="pass"></label>
+                    <input type="text" id="pass" name="cvv" placeholder="CVV (3-digit code)" maxlength="3">
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <label for="name"></label>
+                    <input type="text" id="name" name="card_holder" placeholder="Card Holder Name (e.g., John Doe)">
+                </div>
+                
+                <div class="buttons">
+                    <button type="button" class="back-button" id="back-button">Back</button>
+                    <button type="button" class="continue-button" id="pay-button">PAY</button>
+                </div>
+
+                <div id="custom-alert-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-button">&times;</span>
+                        <img src="../images/checkmark.jpeg" alt="checkmark">
+                        <p>Thank You!</p>
+                        <p>Your order has been placed successfully.</p>
+                        <p>You will be redirected back to the shop.</p>
+                        <a href="../html/shop.html" id="okButton" class="done">Done</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="summary-section">
+            <h3>SUMMARY</h3>
+            <div id="shipping-info"></div>
+            <ul>
+                <li>SUBTOTAL: <span id="subtotal"></span></li>
+                <li>SHIPPING & HANDLING: <span id="shipping"></span></li>
+                <li>TAXES: <span id="taxes"></span></li>
+                <li class="total">TOTAL: <span id="total"></span></li>
+            </ul>
+            <div class="cart">
+                <h4>IN YOUR CART (<span id="cart-count">0</span>)</h4>
+                <p>Arrives 18/11 - 26/11</p>
+                <div id="cart-items"></div>
+                <div class="shipping-delivery">
+                    <h4>SHIPPING & DELIVERY</h4>
+                    <p>Orders are delivered on business days Monday-Friday excluding public holidays.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../javascript/checkout2.js"></script>
+</body>
+</html>

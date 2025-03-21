@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Splash Screen</title>
+    <link rel="stylesheet" href="../css/splash.css">
+</head>
+<body>
+    <div id="video">
+        <video id="background-video" autoplay muted>
+            <source src="../images/background.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div id="splash-screen">
+        <h1>Climate Action</h1>
+        <p>Mobilizing communities worldwide for a greener tomorrow.</p>
+        <div id="group-members">
+            <h2>Group Members : </h2>
+            <ul>
+                <li>Mihin Abeywickrama</li>
+                <li>Senura Liyanawaala</li>
+                <li>Vihanghana Roosarani</li>
+                <li>Sasanka Senerathne</li>
+            </ul>
+        </div>
+        <div id="loader">
+            <img src="../images/loader.gif" alt="loader">
+        </div>
+    </div>
+    <script>
+        // Redirect to the home page after 4 seconds
+        setTimeout(function() {
+            window.location.href = '/CW of all students/Student 02/html/home.htm';
+        }, 4000);
+    </script>
+</body>
+</html>

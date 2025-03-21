@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/external.css">
+</head>
+<body>
+    <header class="home-header">
+    <div class="website-identity">
+      <img src="../images/logo.jpeg" alt="Logo" class="header-logo">
+    </div>
+    <nav>
+      <ul class="navbar">
+        <li><a href="/CW of all students/Student 02/html/home.htm">Home</a></li>
+        <li><a href="/CW of all students/Student 04/html/test.html">Gallery</a></li>
+        <li><a href="/CW of all students/Student 01/html/shop.html">Shop</a></li>
+        <li><a href="/CW of all students/Student 03/html/user_profile.html">User Profile</a></li>
+        <li><a href="/CW of all students/Student 02/html/feedback.htm">Feedback</a></li>
+        <li><a href="/CW of all students/Student 04/html/sitemap5.html">Sitemap</a></li>
+        <li><a href="/CW of all students/Student 03/html/team.html">Team</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <h1>Create User Profile</h1>
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar">0%</div>
+    </div>
+    <button onclick="startProfileCreation()">Start</button>
+    <div id="userProfile">
+        <!-- User profile will be displayed here -->
+    </div>
+
+    <div id="buttons">
+        <!-- Buttons for navigation will be dynamically added here -->
+    </div>
+
+    <div id="submit" style="display: none;">
+        <button onclick="submitAlert()">Submit</button>
+    </div>
+
+    <footer class="home-footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+                <p>
+                    <a href="#">Privacy Policy</a> | 
+                    <a href="#">Terms of Service</a> | 
+                    <a href="#">Contact Us</a>
+                </p>
+            </div>
+            <div class="footer-social-media">
+                <h3>Follow Us</h3>
+                <a href="https://facebook.com/YourCompany" target="_blank" aria-label="Facebook">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                </a>
+                <a href="https://twitter.com/YourCompany" target="_blank" aria-label="Twitter">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Twitter_Logo_as_of_2021.svg" alt="Twitter">
+                </a>
+                <a href="https://instagram.com/YourCompany" target="_blank" aria-label="Instagram">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                </a>
+                <a href="https://linkedin.com/company/YourCompany" target="_blank" aria-label="LinkedIn">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/LinkedIn_logo_initials.png" alt="LinkedIn">
+                </a>
+            </div>
+            <div class="footer-contact-address">
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: <a href="mailto:weather@climateaction.com">info@yourcompany.com</a></p>
+                    <p>Phone: +94 112 353 353</p>
+                </div>
+                <div class="footer-address">
+                    <h3>Address</h3>
+                    <p>Climate Action.pvt(ltd) </p>
+                    <p>Bauddaloka Mawatha, </p>
+                    <p>Colombo 03</p>
+                    <p>Sri lanka</p>
+                </div>
+            </div>
+        </div>
+      </footer>
+
+      <script src="../javascript/script.js"></script>
+</body>
+</html>

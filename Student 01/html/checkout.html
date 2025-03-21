@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping Form</title>
+    <link rel="stylesheet" href="../css/checkout.css">
+</head>
+<body>
+    <div class="container">
+        <div class="shipping-section">
+            <h2>Billing Address</h2>
+            <form class="shipping-form">
+                <!-- Billing Address Fields -->
+                <div class="input-group">
+                    <label for="address-line-1">Address Line 1 *</label>
+                    <input type="text" id="address-line-1" name="address-line-1" placeholder="123 Main St">
+                </div>
+                <div class="input-group">
+                    <label for="address-line-2">Address Line 2 </label>
+                    <input type="text" id="address-line-2" name="address-line-2" placeholder="Apt 4B">
+                </div>
+                <div class="input-group">
+                    <label for="address-line-3">Address Line 3</label>
+                    <input type="text" id="address-line-3" name="address-line-3" placeholder="Building 3">
+                </div>
+                <div class="input-group">
+                    <label for="town">Town / City *</label>
+                    <input type="text" id="town" name="town" placeholder="Toronto">
+                </div>
+                <div class="input-group">
+                    <label for="postal-code">Postal code / ZipCode *</label>
+                    <input type="text" id="postal-code" name="postal-code" placeholder="A1A 1A1">
+                </div>
+                
+                <div class="input-group">
+                    <label for="country">Country/Region *</label>
+                    <input type="text" id="country" name="country" placeholder="Canada">
+                </div>
+                    
+                
+                <h2>Contact Details</h2>
+                <div class="input-group">
+                    <label for="first-name">First Name *</label>
+                    <input type="text" id="first-name" name="first-name" placeholder="John">
+                </div>
+                <div class="input-group">
+                    <label for="last-name">Last Name *</label>
+                    <input type="text" id="last-name" name="last-name" placeholder="Doe">
+                </div>
+                <div class="input-group">
+                    <label for="tel">Phone number *</label>
+                    <div class="phone-input">
+                        <input type="tel" id="tel" name="telephone" placeholder="enter 10 digits.">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="example@example.com">
+                </div>
+                <div class="buttons">
+                    <button type="button" class="clear-button">Clear</button>
+                    <button type="button" class="back-button">Shop</button>
+                    <button class="continue-button" type="button">Continue</button>
+                </div>
+            </form>
+        </div>
+        <div class="summary-section">
+            <h3>SUMMARY</h3>
+            <ul>
+                <li>SUBTOTAL: <span id="subtotal"></span></li>
+                <li>SHIPPING & HANDLING: <span id="shipping"></span></li>
+                <li>TAXES: <span id="taxes"></span></li>
+                <li class="total">TOTAL: <span id="total"></span></li>
+            </ul>
+            <div class="cart">
+                <h4>IN YOUR CART (<span id="cart-count">0</span>)</h4>
+                <p>Arrives 18/11 - 26/11</p>
+                <div id="cart-items"></div>
+                <div class="shipping-delivery">
+                    <h4>SHIPPING & DELIVERY</h4>
+                    <p>Orders are delivered on business days Monday-Friday excluding public holidays.</p>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../javascript/checkout.js"></script>
+</body>
+</html>

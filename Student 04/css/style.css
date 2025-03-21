@@ -1,0 +1,18 @@
+groupId2{
+	background-color: aqua;
+}
+body{
+	background-color: rgb(74, 9, 63);
+}
+h1{
+	text-align: center;
+	text-decoration: underline;
+	text-shadow: 0ch;
+    color: #ffffff;
+}
+.text a:hover:not(.active) { background-color: #111; }
+.active { background-color: #f48301; }
+.active1 { background-color: #B22222; }
+.active, .dot:hover {
+    background-color: #717171;
+}

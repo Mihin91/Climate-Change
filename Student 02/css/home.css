@@ -1,0 +1,414 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url('../images/newbg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header Styling */
+header.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align items in the center vertically */
+  background: rgba(30, 30, 30, 0.8);
+  padding: 10px 20px; /* Adjusted padding */
+  color: white;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+header.home-header .website-identity {
+  display: flex;
+  align-items: center; /* Align items in the center vertically */
+}
+
+header.home-header .website-identity img {
+  height: 50px; /* Adjusted logo height */
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+header.home-header .navbar {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  margin-right: 170px;
+  padding: 0;
+  justify-content: center; /* Center align navigation items */
+  flex-wrap: wrap;
+}
+
+
+
+header.home-header .navbar li {
+  margin: 0 10px; /* Reduced margin */
+}
+
+header.home-header .navbar a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  background: rgba(52, 152, 219, 0.8); /* Bright background for links */
+  padding: 8px 20px; /* Reduced padding */
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+header.home-header .navbar a:hover {
+  background: rgba(52, 152, 219, 1); /* Bright background for links */
+  border: 2px solid #ffffff;
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Aligning the main content sections */
+.home-main {
+  color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  flex: 1; /* Allow main content to grow */
+  z-index: 1;
+}
+
+.home-website-mission {
+  font-family: 'Great Vibes';
+  font-size: 2em;
+  color: #f7f5f6;
+  margin-bottom: 20px;
+}
+
+.home-content-links, .home-content-tiles.h3 {
+  margin-bottom: 20px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 1em;
+  color: white;
+}
+
+.home-content-tiles p {
+  margin-bottom: 20px;
+  font-family: 'Great Vibes', cursive;
+  background-color: rgba(255, 255, 0, 0.3); /* Shaded yellow background */
+  font-size: 1em;
+  color: white;
+  text-decoration: none; /* Remove underline */
+}
+
+.home-content-tiles h3 {
+  margin-bottom: 20px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 1em;
+  color: #f6f7f4;
+}
+
+.home-content-tiles img {
+  width: 250px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin: 10px; /* Add spacing if desired */
+}
+
+.typewriter {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Updated font */
+  color: #fefefe;
+  background: rgba(45, 44, 44, 0.7); /* Semi-transparent background */
+  border-radius: 5px; /* Optional: rounded corners */
+  padding: 10px; /* Add some padding */
+  z-index: 2; /* Higher z-index */
+}
+
+/* Inline Images Section */
+.home-inline-images-container {
+  position: absolute;
+  bottom: 20px; /* Adjust top position as needed */
+  left: 20px; /* Adjust right position as needed */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.home-inline-images {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align to the left */
+  gap: 10px; /* Small equal space between images */
+  margin: 0; /* Remove default margin */
+}
+
+.home-inline-images h2 {
+  margin-bottom: 10px;
+}
+
+.home-image-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.home-image-links .image-link:nth-child(3) img {
+  width: 230px; /* Adjust to match others */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.home-image-group {
+  display: flex;
+  gap: 10px;
+  transform: skew(-20deg);
+}
+
+.image-link {
+  display: flex;
+  justify-content: center; /* Center images within the link */
+  align-items: center;
+}
+
+.image-link img {
+  width: 225px;
+  height: auto;
+  border: none;
+  outline: none;
+  transform: skew(20deg);
+}
+
+/* Footer Styling */
+footer.home-footer {
+  background: rgba(44, 62, 80, 0.9); /* Darker semi-transparent background */
+  color: white;
+  padding: 15px 5px; /* Further reduced padding for a smaller footer */
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.3); /* Further reduced shadow for footer */
+}
+
+footer.home-footer .footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px; /* Reduced space between sections */
+  max-width: 1000px; /* Reduced max width for a more compact layout */
+  margin: 0 auto; /* Center the content */
+}
+
+/* Section for footer info */
+footer.home-footer .footer-info {
+  flex: 1;
+  min-width: 120px; /* Further reduced minimum width */
+}
+
+footer.home-footer .footer-info p {
+  margin: 4px 0; /* Further reduced margin */
+  font-size: 0.75em; /* Further reduced font size */
+}
+
+footer.home-footer .footer-info a {
+  color: #3498db; /* Bright link color */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.75em; /* Further reduced font size */
+  transition: color 0.3s ease; /* Smooth transition */
+}
+
+footer.home-footer .footer-info a:hover {
+  color: #1abc9c; /* Change link color on hover */
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Section for social media */
+footer.home-footer .footer-social-media {
+  text-align: center;
+}
+
+footer.home-footer .footer-social-media h3 {
+  margin-bottom: 8px; /* Further reduced margin */
+  font-size: 1.1em; /* Further reduced font size */
+}
+
+footer.home-footer .footer-social-media a {
+  margin: 0 6px; /* Reduced margin */
+  display: inline-block; /* Inline block for icons */
+}
+
+footer.home-footer .footer-social-media img {
+  width: 28px; /* Further reduced size of social media icons */
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+footer.home-footer .footer-social-media img:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Reduced shadow on hover */
+}
+
+/* Section for contact and address */
+footer.home-footer .footer-contact,
+footer.home-footer .footer-address {
+  text-align: left; /* Align text to the left for contact and address sections */
+}
+
+footer.home-footer .footer-contact,
+footer.home-footer .footer-address {
+  flex: 1;
+  min-width: 160px; /* Further reduced minimum width */
+}
+
+footer.home-footer .footer-contact h3,
+footer.home-footer .footer-address h3 {
+  margin-bottom: 5px; /* Further reduced margin */
+  font-size: 1.1em; /* Further reduced font size */
+}
+
+footer.home-footer .footer-contact a {
+  color: #3498db; /* Bright link color */
+  text-decoration: none;
+  font-size: 0.75em; /* Further reduced font size */
+  transition: color 0.3s ease; /* Smooth transition */
+}
+
+footer.home-footer .footer-contact a:hover {
+  color: #1abc9c; /* Change link color on hover */
+}
+
+/* Flexbox Container for Contact and Address Alignment */
+footer.home-footer .footer-contact-address {
+  display: flex;
+  justify-content: space-between; /* Space between contact and address */
+  align-items: flex-start;
+  gap: 10px; /* Reduced space between sections */
+}
+
+footer.home-footer .footer-contact-address .footer-contact,
+footer.home-footer .footer-contact-address .footer-address {
+  flex: 1;
+  min-width: 160px; /* Further reduced minimum width */
+}
+
+footer.home-footer .footer-address {
+  text-align: left; /* Align text to the left for address section */
+}
+
+footer.home-footer .footer-address p {
+  margin: 0; /* Remove margin */
+  line-height: 1.2; /* Adjust line height for compactness */
+  font-size: 0.75em; /* Further reduced font size */
+}
+
+.explore-featured-content {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  color: rgba(255, 215, 0, 0.9);
+  text-align: center;
+  margin: 20px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  letter-spacing: 1px;
+  background-color: #272626; /* Brown background */
+  padding: 10px 20px; /* Add horizontal padding */
+  border-radius: 5px; /* Optional: round corners */
+  position: relative;
+  width: calc(100% - 0px); /* Extend width to match container */
+  left: 0; /* Align with left edge */
+  z-index: 1; /* Ensure it's above other elements */
+  box-sizing: border-box; /* Include padding in width */
+}
+
+/* Remove hover effect on text */
+.explore-featured-content:hover {
+  transform: none; /* No transformation on hover */
+  color: rgba(255, 215, 0, 0.9);
+}
+
+/* Footer Fixed to Bottom */
+footer.home-footer {
+  margin-top: auto; /* Push footer to bottom */
+}
+
+.content-container {
+  background: rgba(155, 171, 187, 0.9); /* Darker semi-transparent background */
+  border-radius: 10px;
+  padding: 30px;
+  width: 75%;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: fixed; /* Fixed positioning */
+  right: 0px; /* Adjust for spacing */
+  top: 60px; /* Below the header */
+  bottom: 195px; /* Above the footer */
+  overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+.form-group {
+  width: 100%;
+  text-align: left;
+}
+
+label, input, textarea, button {
+  color: #333;
+  margin: 5px 0;
+  display: block;
+  text-align: relative;
+  width: calc(100% - 10px);
+}
+
+input, textarea {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.radio-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.radio-group label {
+  margin-right: 10px;
+}

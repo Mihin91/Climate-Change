@@ -1,0 +1,464 @@
+/* General Styles for HTML and Body */
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Sets a clean, modern font */
+    margin: 0;
+    padding: 0;
+    background-color: black; /* Sets a dark background for contrast */
+}
+
+/* Container styling */
+.filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: 20px 0;
+    padding: 5px;
+    background: linear-gradient(135deg, #709ebd, #062f5e); /* Blue gradient background */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 255, 0.2); /* Soft blue shadow */
+    border: 2px solid #003d66; /* Dark blue border */
+}
+
+/* Input field styling */
+.filter input[type="text"] {
+    padding: 6px;
+    border: 2px solid #003d66; /* Dark blue border */
+    border-radius: 8px;
+    font-size: 16px;
+    width: 220px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff; /* White background for input */
+}
+
+/* Focus effect on input field */
+.filter input[type="text"]:focus {
+    border-color: #08101a; /* Light blue on focus */
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.6); /* Blue glow effect */
+}
+
+/* Button styling */
+.filter input[type="button"],
+.filter input[type="reset"] {
+    padding: 6px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #10427a; /* Blue background */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Button hover effect */
+.filter input[type="button"]:hover,
+.filter input[type="reset"]:hover {
+    background-color: #357ABD; /* Slightly darker blue on hover */
+    transform: translateY(-4px); /* Slight lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 255, 0.3); /* Stronger blue shadow on hover */
+}
+
+/* Button active effect */
+.filter input[type="button"]:active,
+.filter input[type="reset"]:active {
+    background-color: #003d66; /* Even darker blue on click */
+    transform: translateY(0); /* Remove lift effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 255, 0.4); /* Adjust shadow on click */
+}
+
+/* Button reset styling */
+.filter input[type="reset"] {
+    background-color: #12181f; /* Lighter blue for reset button */
+}
+
+.filter input[type="reset"]:hover {
+    background-color: #4a90e2; /* Slightly darker blue on hover */
+}
+
+/* Additional focus and hover effects */
+.filter input:focus {
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.6); /* Blue shadow effect */
+}
+
+
+
+/* Container for products */
+.container {
+    display: flex; /* Aligns items in a row */
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    justify-content: center; /* Centers items horizontally */
+    padding: 20px; /* Adds padding around the container */
+}
+
+/* Styles for each product card */
+.product {
+    display: inline; /* Allows multiple products to be displayed in a row */
+    background-color: white; /* Background color of the product card */
+    border: 1px solid #ddd; /* Light border around the card */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for 3D effect */
+    margin: 10px; /* Margin between product cards */
+    width: 270px; /* Fixed width for product cards */
+    text-align: center; /* Centers text inside the card */
+    overflow: hidden; /* Hides overflow content */
+    position: relative; /* Allows absolute positioning of child elements */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Image within the product card */
+.product img {
+    width: 100%; /* Ensures image takes full width of the card */
+    height: auto; /* Keeps image aspect ratio */
+    transition: transform 0.3s ease; /* Smooth scale transition on hover */
+}
+
+/* Content inside the product card */
+.content {
+    background-color: rgb(41, 44, 42); /* Light greenish background */
+    padding: 10px; /* Reduced padding for a more compact design */
+    height: 120px; /* Fixed height for content area */
+    overflow: auto; /* Allows scrolling if content overflows */
+}
+
+/* Title of the product */
+.title {
+    font-size: 16px; /* Font size for the title */
+    font-weight: bold; /* Bold text */
+    margin: 0; /* Removes default margin */
+}
+
+/* Price of the product */
+.price {
+    font-size: 14px; /* Smaller font size for price */
+    color: #ffffff; 
+    margin: 5px 0 10px; /* Adjusted margin for spacing */
+}
+
+/* Add to cart button styles */
+.add-to-cart {
+    display: inline-block; /* Allows the button to be inline with other elements */
+    padding: 10px 20px; /* Increased padding for a more substantial button */
+    background: linear-gradient(45deg, #007bff, #0056b3); /* Gradient background for modern look */
+    color: white; /* White text color */
+    text-decoration: none; /* Removes underline from the button */
+    border-radius: 5px; /* Rounded corners */
+    position: absolute; /* Positioned at the bottom of the product card */
+    bottom: -40px; /* Positioned slightly below the card */
+    left: 50%; /* Centers the button horizontally */
+    transform: translateX(-50%); /* Adjusts horizontal position */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    font-size: 16px; /* Increased font size for better readability */
+    font-weight: bold; /* Bold text */
+    border: 2px solid transparent; /* Transparent border to avoid layout shift */
+    cursor: pointer; /* Shows a pointer cursor on hover */
+}
+
+/* Hover effect for add-to-cart button */
+.product:hover .add-to-cart {
+    bottom: 10px; /* Moves button up on hover */
+    background: linear-gradient(45deg, #0056b3, #007bff); /* Inverted gradient for hover effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth effect */
+    transform: translateX(-50%) scale(1.05); /* Slight scale up on hover */
+    border-color: #fff; /* White border on hover */
+}
+/* Hover effect for product image */
+.product:hover img {
+    transform: scale(1.1); /* Scales up the image on hover */
+}
+
+/* Hover effect for add-to-cart button */
+.product:hover .add-to-cart {
+    bottom: 10px; /* Moves button up on hover */
+}
+
+/* Cart icon styles */
+.cart {
+    position: fixed; /* Fixed position at the bottom-right */
+    bottom: 20px; /* Distance from the bottom of the viewport */
+    right: 20px; /* Distance from the right edge of the viewport */
+    width: 50px; /* Width of the cart icon */
+    height: 50px; /* Height of the cart icon */
+    cursor: pointer; /* Shows a pointer cursor on hover */
+    z-index: 1100; /* Ensures it stays on top of other elements */
+    transition: right 0.3s ease; /* Smooth transition for movement */
+}
+
+/* Cart icon image styling */
+.cart img {
+    width: 100%; /* Takes full width of the cart container */
+    height: 100%; /* Takes full height of the cart container */
+    border-radius: 25px; /* Makes the cart icon circular */
+}
+
+/* Badge for item count in the cart */
+.count {
+    position: absolute; /* Positioned at the top-right of the cart icon */
+    top: -10px; /* Distance from the top of the cart icon */
+    right: -10px; /* Distance from the right of the cart icon */
+    background-color: red; /* Red background for the badge */
+    color: white; /* White text color */
+    border-radius: 50%; /* Circular badge */
+    padding: 5px 10px; /* Padding inside the badge */
+    font-size: 14px; /* Font size for the count */
+}
+
+/* Sidecart styles */
+.sidecart {
+    position: fixed; /* Fixed position on the right side */
+    top: 0; /* Stays at the top of the viewport */
+    right: -300px; /* Initially hidden off-screen */
+    width: 300px; /* Width of the sidecart */
+    height: 100%; /* Full height of the viewport */
+    background-color: white; /* White background for the sidecart */
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5); /* Shadow for depth effect */
+    transition: right 0.3s ease; /* Smooth transition for slide-in effect */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stacks items vertically */
+    justify-content: space-between; /* Space between header, content, and footer */
+    z-index: 999; /* Ensures it stays on top of other elements */
+}
+
+/* Content area inside the sidecart */
+.sidecart .content {
+    flex-grow: 1; /* Takes up remaining space */
+    padding: 20px; /* Padding around content */
+    overflow-y: auto; /* Vertical scroll if content overflows */
+}
+
+/* Open state for sidecart */
+.sidecart.open {
+    right: 0; /* Slides in from the right */
+}
+
+/* Basket item styling */
+.basket-item button {
+    background: none; /* Removes default background */
+    border: none; /* Removes default border */
+    cursor: pointer; /* Shows a pointer cursor on hover */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+}
+
+/* Icon styles within basket item */
+.basket-item i {
+    color: #000; /* Black color for icons */
+    font-size: 15px; /* Font size for icons */
+}
+
+/* Spacing between quantity buttons */
+.basket-item .item-quantity button {
+    margin: 0 5px; /* Adjusts spacing between buttons */
+}
+
+/* Clear cart button specific styles */
+#clear-cart {
+    border-radius: 10px;
+    background: rgb(212, 40, 40); /* Removes background */
+    color: black; /* Black text color */
+}
+
+/* Header styles */
+.header {
+    padding: 10px; /* Padding around header */
+    background-color: #1e74bb; /* Light gray background */
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-between; /* Space between header items */
+    align-items: center; /* Align items vertically */
+}
+#closecart{
+    background-color: black;
+    border-radius: 15px;
+}
+/* Footer styles */
+.footer {
+    color: black;
+    padding: 20px; /* Padding around footer */
+    background-color: #f1f1f1; /* Light gray background */
+    text-align: center; /* Centers text */
+}
+
+/* General button styles */
+button {
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px 20px; /* Padding inside buttons */
+    border: none; /* Removes default border */
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text color */
+    cursor: pointer; /* Shows pointer cursor on hover */
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #0056b3; /* Darker blue background on hover */
+}
+
+/* Link styles in the footer */
+.footer a {
+    text-decoration: none; /* Removes underline from links */
+    color: inherit; /* Inherits color from parent */
+}
+
+/* Overlay styles */
+.overlay {
+    position: fixed; /* Covers the entire viewport */
+    top: 0; /* Stays at the top */
+    left: 0; /* Stays at the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    display: none; /* Hidden by default */
+    z-index: 998; /* Positioned below sidecart */
+}
+
+/* Visible state for overlay */
+.overlay.visible {
+    display: block; /* Shows the overlay */
+}
+
+/* Filter section styling */
+.filter {
+    margin: 20px; /* Margin around the filter controls */
+    margin-top: 50px; /* Additional top margin */
+}
+
+/* Styling for basket items */
+/* Additional CSS for better alignment and styling of cart items */
+.basket-item {
+    display: flex; /* Aligns item details horizontally */
+    align-items: flex-start; /* Aligns items to the top */
+    padding: 10px; /* Padding inside each cart item */
+    border-bottom: 1px solid #ddd; /* Light border between items */
+}
+
+.basket-item img {
+    width: 50px; /* Fixed width for images */
+    height: 50px; /* Fixed height for images */
+    margin-right: 10px; /* Space between image and text */
+}
+
+.basket-item .item-details {
+    flex-grow: 1; /* Takes up remaining space */
+    display: flex; /* Aligns item details horizontally */
+    flex-direction: column; /* Stacks details vertically */
+}
+
+.basket-item .item-title {
+    font-size: 14px; /* Font size for item title */
+    margin-bottom: 5px; /* Space below the title */
+    word-wrap: break-word; /* Wraps long words to next line */
+}
+
+.basket-item .item-price,
+.basket-item .item-quantity {
+    font-size: 12px; /* Smaller font size for price and quantity */
+    margin-bottom: 5px; /* Space below each detail */
+}
+
+.basket-item .quantity-buttons {
+    display: flex; /* Aligns quantity buttons horizontally */
+    gap: 5px; /* Space between buttons */
+}
+
+.basket-item .quantity-buttons button {
+    background: none; /* Removes default background */
+    border: none; /* Removes default border */
+    cursor: pointer; /* Pointer cursor on hover */
+    padding: 5px; /* Padding inside buttons */
+}
+
+.basket-item .quantity-buttons i {
+    color: #ffffff; /* Black color for icons */
+    font-size: 14px; /* Font size for icons */
+}
+
+/* Total cost display at the bottom of the sidecart */
+.total {
+    display: flex; /* Aligns total and its label horizontally */
+    justify-content: space-between; /* Spaces total and label to edges */
+    font-size: 18px; /* Larger font size for visibility */
+    margin-bottom: 20px; /* Space below the total section */
+}
+
+/* Visibility state for overlay */
+.overlay.visible {
+    display: block; /* Shows the overlay when visible */
+}
+
+/* Sidecart visible state */
+.sidecart.open {
+    right: 0; /* Slides in sidecart to visible area */
+}
+
+/* Container for buttons with spacing */
+.button-container {
+    display: flex; /* Aligns buttons horizontally */
+    gap: 1rem; /* Space between buttons */
+}
+
+/* General button styles */
+.btn {
+    display: inline-block; /* Allows buttons to be inline with text */
+    padding: 10px 20px; /* Padding inside buttons */
+    font-size: 16px; /* Font size for button text */
+    font-weight: bold; /* Bold text for emphasis */
+    text-align: center; /* Centers text within the button */
+    text-decoration: none; /* Removes underline from button text */
+    border-radius: 5px; /* Rounded corners for buttons */
+    border: none; /* Removes default button border */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    color: #fff; /* White text color */
+}
+
+/* Style for the clear cart button */
+.btn-clear-cart {
+    background-color: #8f0707; /* Dark background color */
+    border: 2px solid #333; /* Border color matches background */
+}
+
+/* Hover effect for clear cart button */
+.btn-clear-cart:hover {
+    background-color: #800404; /* Slightly lighter background on hover */
+    border-color: #6b0303; /* Border color matches background on hover */
+}
+
+/* Style for the checkout button */
+.btn-checkout {
+    border-radius: 10px;
+    background-color: #0c7c08; /* Blue background color */
+    border: 2px solid #a7cfb1; /* Border color matches background */
+}
+
+/* Hover effect for checkout button */
+.btn-checkout:hover {
+    background-color: #013811; /* Darker blue background on hover */
+    border-color: #014d14; /* Border color matches background on hover */
+}
+
+
+.page-editor-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.page-editor-button {
+    background-color: #0d0486; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Some padding */
+    border: none; /* Remove borders */
+    cursor: pointer; /* Pointer/hand icon */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Increase font size */
+    text-decoration: none; /* Remove underline */
+}
+
+.page-editor-button:hover {
+    background-color: #4f5ddf; /* Darker green */
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="/CW of all students/Student 02/css/home.css">
+    <style>
+        .preview-container {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+        .preview-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .preview-item {
+            margin-bottom: 10px;
+        }
+        .preview-label {
+            font-weight: bold;
+        }
+        .confirmation {
+            color: green;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header class="home-header">
+        <div class="website-identity">
+          <img src="../images/logo.jpg" alt="Logo" class="header-logo">
+        </div>
+        <nav>
+          <ul class="navbar">
+            <li><a href="/CW of all students/Student 02/html/home.htm">Home</a></li>
+            <li><a href="/CW of all students/Student 04/html/test.html" >Gallery</a></li>
+            <li><a href="/CW of all students/Student 01/html/shop.html">Shop</a></li>
+            <li><a href="/CW of all students/Student 03/html/user_profile.html">User Profile</a></li>
+            <li><a href="/CW of all students/Student 02/html/feedback.htm">Feedback</a></li>
+            <li><a href="/CW of all students/Student 04/html/sitemap5.html">Sitemap</a></li>
+            <li><a href="/CW of all students/Student 03/html/team.html">Team</a></li>
+          </ul>
+        </nav>
+      </header>      
+
+    <main>
+        <section id="feedback-section" class="container">
+            <div class="content-container">
+                <h1>Drop your feedback here</h1>
+                <form id="feedback-form" onsubmit="generatePreview(event)">
+                    <div class="form-group">
+                        <label for="name">*Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name here.." required>
+                        <label for="email">*Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email here.." required>
+                        <label for="rating">*Rating:</label>
+                        <select id="rating" name="rating" required>
+                            <option value="">Select Rating</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <label>Is this your first visit?</label>
+                        <div>
+                            <label><input type="radio" name="first_visit" value="yes" required> Yes</label>
+                            <label><input type="radio" name="first_visit" value="no" required> No</label>
+                        </div>
+                        <label>Is this site easy to navigate and well informative?</label>
+                        <div>
+                            <label><input type="radio" name="navigation" value="yes" required> Yes</label>
+                            <label><input type="radio" name="navigation" value="no" required> No</label>
+                        </div>
+                        <label for="feedback">*Your Feedback:</label>
+                        <textarea name="feedback" id="feedback" rows="5" placeholder="Drop your message here.." required></textarea>
+                        <label>Satisfaction with our services (1-10):</label>
+                        <div>
+                            <label><input type="radio" name="satisfaction" value="1"> 1</label>
+                            <label><input type="radio" name="satisfaction" value="2"> 2</label>
+                            <label><input type="radio" name="satisfaction" value="3"> 3</label>
+                            <label><input type="radio" name="satisfaction" value="4"> 4</label>
+                            <label><input type="radio" name="satisfaction" value="5"> 5</label>
+                            <label><input type="radio" name="satisfaction" value="6"> 6</label>
+                            <label><input type="radio" name="satisfaction" value="7"> 7</label>
+                            <label><input type="radio" name="satisfaction" value="8"> 8</label>
+                            <label><input type="radio" name="satisfaction" value="9"> 9</label>
+                            <label><input type="radio" name="satisfaction" value="10"> 10</label>
+                        </div>
+                        <label>Do you love our service?</label>
+                        <div>
+                            <label><input type="radio" name="love_service" value="yes"> Yes</label>
+                            <label><input type="radio" name="love_service" value="no"> No</label>
+                        </div>
+                        <label>Receive updates via email?</label>
+                        <select name="updates_email">
+                            <option value="yes">Yes - via Email</option>
+                            <option value="no">No - via Email</option>
+                        </select>
+                        <label>Any additional requests or questions:</label>
+                        <textarea name="additional_requests"></textarea>
+                    </div>
+                    <button type="submit">Preview</button>
+                </form>
+                <div id="preview" class="preview-container" style="display: none;"></div>
+                <button id="final-submit" style="display: none;" onclick="submitForm()">Submit</button>
+                <div id="confirmation" class="confirmation" style="display: none;">Thank you for your feedback!</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="home-footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+                <p>
+                    <a href="#">Privacy Policy</a> | 
+                    <a href="#">Terms of Service</a> | 
+                    <a href="#">Contact Us</a>
+                </p>
+            </div>
+            <div class="footer-social-media">
+                <h3>Follow Us</h3>
+                <a href="https://facebook.com/YourCompany" target="_blank" aria-label="Facebook">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                </a>
+                <a href="https://twitter.com/YourCompany" target="_blank" aria-label="Twitter">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Twitter_Logo_as_of_2021.svg" alt="Twitter">
+                </a>
+                <a href="https://instagram.com/YourCompany" target="_blank" aria-label="Instagram">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                </a>
+                <a href="https://linkedin.com/company/YourCompany" target="_blank" aria-label="LinkedIn">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/LinkedIn_logo_initials.png" alt="LinkedIn">
+                </a>
+            </div>
+            <div class="footer-contact-address">
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: <a href="mailto:info@yourcompany.com">info@yourcompany.com</a></p>
+                    <p>Phone: +94 112 353 353</p>
+                </div>
+                <div class="footer-address">
+                    <h3>Address</h3>
+                    <p>Climate Action.pvt(ltd) </p>
+                    <p>Bauddaloka Mawatha, </p>
+                    <p>Colombo 03</p>
+                    <p>Sri Lanka</p>
+                </div>
+            </div>
+        </div>
+    </footer> 
+
+    <script>
+        function generatePreview(event) {
+            event.preventDefault();
+            const form = document.getElementById('feedback-form');
+            const formData = new FormData(form);
+            let previewHTML = '<div class="preview-title">Preview Your Feedback</div>';
+
+            formData.forEach((value, key) => {
+                previewHTML += `
+                    <div class="preview-item">
+                        <span class="preview-label">${key}:</span> ${value}
+                    </div>
+                `;
+            });
+
+            const preview = document.getElementById('preview');
+            preview.innerHTML = previewHTML;
+            preview.style.display = 'block';
+
+            const submitButton = document.getElementById('final-submit');
+            submitButton.style.display = 'inline-block';
+        }
+
+        function submitForm() {
+            const confirmation = document.getElementById('confirmation');
+            confirmation.style.display = 'block';
+
+            const form = document.getElementById('feedback-form');
+            form.reset();
+
+            const preview = document.getElementById('preview');
+            preview.innerHTML = '';
+            preview.style.display = 'none';
+
+            const submitButton = document.getElementById('final-submit');
+            submitButton.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

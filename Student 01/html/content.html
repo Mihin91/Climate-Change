@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Action Goals</title>
+    <link rel="stylesheet" href="../css/content.css">
+</head>
+<body>
+    <header>
+        <h1>Renewable Energy Solutions</h1>
+        <nav>
+            <ul>
+                <li><a href="#solar">Solar</a></li>
+                <li><a href="#wind">Wind</a></li>
+                <li><a href="#hydro">Hydro</a></li>
+                <li><a href="#geothermal">Geothermal</a></li>
+                <li><a href="/CW of all students/Student 02/html/home.htm">Return to home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="solar">
+        <div>
+            <h2>Solar Renewable Energy</h2>
+            <p>Solar energy harnesses the power of the sun's rays to generate electricity or heat. 
+            This is done using solar panels (photovoltaic cells) or solar thermal systems</p>
+            <ul>
+                <li><strong>Photovoltaic (PV) Cells:</strong>
+                    These convert sunlight directly into electricity. When sunlight hits the PV cells, 
+                    it excites electrons in the material, generating an electric current.</li>
+
+                <li><strong>Solar Thermal Systems:</strong> 
+                    These use mirrors or lenses to concentrate sunlight onto a receiver, 
+                    which absorbs and converts it into heat. 
+                    This heat can then be used to produce steam that drives a turbine connected to a generator.</li>
+            </ul>
+        </div>
+        <img src="../images/solar.jpg" alt="Solar Energy">
+    </section>
+
+    <section id="wind">
+        <img src="../images/wind.jpg" alt="Wind Energy">
+        <div>
+            <h2>Wind Renewable Energy</h2>
+            <p>Wind energy converts the kinetic energy from wind into mechanical power or electricity using wind turbines.</p>
+            <ul>
+                <li><strong>Wind Turbines:</strong> These have blades that rotate when wind flows over them. 
+                    The rotation turns a shaft connected to a generator, which produces electricity. 
+                    There are two main types of wind turbines: onshore and offshore.</li>      
+            </ul>
+        </div>
+    </section>
+
+    <section id="hydro">
+        <div>
+            <h2>Hydro Renewable Energy</h2>
+            <p>Hydropower, or hydro energy, utilizes the energy of flowing water to generate electricity. 
+            This is typically done with dams or other water control structures.</p>
+            <ul>
+                <li><strong>Dams and Reservoirs:</strong>
+                    Water stored in a reservoir behind a dam is released to flow through turbines. The flowing water turns the turbines, 
+                    which drive generators to produce electricity.</li>
+                <li><strong>Run-of-the-River Systems:</strong> 
+                    These use the natural flow of a river without a large reservoir, 
+                    diverting a portion of the river through turbines before returning it to the riverbed.</li>
+            </ul>
+        </div>
+        <img src="../images/hydro.jpg" alt="Hydro Energy">
+    </section>
+
+    <section id="geothermal">
+        <img src="../images/geo.jpg" alt="Geothermal Energy">
+        <div>
+            <h2>Geothermal Renewable Energy</h2>
+            <p>Geothermal energy harnesses heat from beneath the Earth's surface to generate electricity or provide direct heating.</p>
+            <ul>
+                <li><strong>Geothermal Power Plants:</strong> These are typically located near tectonic plate boundaries where geothermal activity is more pronounced. 
+                    They use steam produced from reservoirs of hot water found a few miles below the Earth's surface. 
+                    The steam is brought to the surface, used to drive a turbine connected to a generator, 
+                    and then condensed back into water and reinjected into the ground.</li>
+
+                <li><strong>Direct Use Applications:</strong>  
+                    Geothermal heat can also be used directly for heating buildings, greenhouses, and industrial processes.</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="scroll-to-top" onclick="scrollToTop()">
+        ↑
+    </div>
+
+    <script>
+        const scrollToTopButton = document.querySelector('.scroll-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopButton.style.display = 'block';
+            } else {
+                scrollToTopButton.style.display = 'none';
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>

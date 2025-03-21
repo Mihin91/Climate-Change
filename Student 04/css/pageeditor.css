@@ -1,0 +1,81 @@
+/* General Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    text-align: center;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-logo {
+    height: 80px; /* Adjust the height as needed */
+    vertical-align: middle; /* Aligns the logo vertically with text */
+    margin-right: 10px; /* Adjust margin as needed */
+}
+
+h1 {
+    background-color: rgb(175, 175, 243);
+    color: #2c3e50;
+    font-size: 2.5em;
+    border-bottom: 2px solid #007BFF;
+    margin: 0;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+}
+
+h2 {
+    color: #2c3e50;
+    font-size: 1.8em;
+    margin-top: 20px;
+    border-top: 2px solid #007BFF;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 5px;
+}
+
+p {
+    font-size: 1.1em;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-bottom: 2px solid #7f858b;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+li.content {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
